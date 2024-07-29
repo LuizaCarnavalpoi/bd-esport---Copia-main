@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Estado {
+  id      Int       @id @default(autoincrement())
+  name    String    @unique
+  Entrega Entrega[]
+
+  @@map("estado")
+}
+
+model Entrega {
+  id          Int    @id @default(autoincrement())
+  cep         String @unique
+  city        String
+  rua         String
+  numero      String
+  complemento String
+  estadoId    Int    @map("state_id")
+  estado      Estado @relation(fields: [estadoId], references: [id])
+
+  @@map("entrega")
+}
+
+model Usuario {
+  id           Int         @id @default(autoincrement())
+  name         String
+  email        String      @unique
+  passwordHash String      @map("password_hash")
+  token        String
+  Pagamento    Pagamento[]
+
+  @@map("usuario")
+}
+
+model Pagamento {
+  id           Int     @id @default(autoincrement())
+  nameCard     String
+  numberCard   String
+  dateVLM      String
+  dateVLA      String
+  codeS        String
+  cpf          String
+  parcelamento String
+  usuarioId    Int     @map("usuario_id")
+  usuario      Usuario @relation(fields: [usuarioId], references: [id])
+
+  @@map("pagamento")
+}
+
+model Produto {
+  id                   Int    @id @default(autoincrement())
+  name                 String
+  description          String
+  price                String
+  size                 String
+  gender               String
+  indicatedFor         String
+  composition          String
+  team                 String
+  guarantee            String
+  approximateDimension String
+  assessment           String
+
+  @@map("produto")
+}

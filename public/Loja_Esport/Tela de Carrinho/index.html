@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@275;300;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #030202;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+ 
+    .container {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+ 
+    .e-sport {
+      font-family: 'Oswald', sans-serif;
+      font-size: 48px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+ 
+    .cart-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+ 
+    .cart-container h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 48px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+ 
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #000;
+      align-items: center;
+    }
+ 
+    .cart-item span {
+      font-weight: bold;
+    }
+ 
+    .remove-item {
+      cursor: pointer;
+      font-size: 20px;
+      color: red;
+      background: none;
+      border: none;
+      margin-left: 10px;
+    }
+ 
+    .total {
+      font-size: 32px;
+      margin-top: 20px;
+      color: #000;
+      font-weight: bold;
+    }
+ 
+    .checkout-button {
+      width: 198px;
+      height: 44px;
+      cursor: pointer;
+      background: #191919;
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+ 
+    .clear-cart-button {
+      width: 198px;
+      height: 44px;
+      cursor: pointer;
+      background: red;
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+ 
+    .back-to-shop {
+      display: block;
+      margin-top: 20px;
+      color: #191919;
+      text-decoration: none;
+      font-size: 14px;
+    }
+ 
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+    }
+ 
+    .quantity-button {
+      background: #191919;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+    }
+ 
+    .cart-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #fff;
+      background: #191919;
+      padding: 10px;
+      border-radius: 50%;
+    }
+ 
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: red;
+      color: #fff;
+      border-radius: 50%;
+      padding: 5px 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+ 
+    .tooltip {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #fff;
+      color: #000;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 250px;
+      z-index: 10;
+      font-size: 16px;
+      text-align: left;
+    }
+ 
+    .cart-icon:hover + .tooltip {
+      display: block;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="container">
+    <span class="e-sport">E-Sport</span>
+    <div class="cart-container">
+      <h1>Carrinho</h1>
+      <div class="cart-item">
+        <span>Regata Boston Celtics</span>
+        <div class="quantity-controls">
+          <button class="quantity-button" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity">1</span>
+          <button class="quantity-button" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+        <span class="price">R$ 249,90</span>
+        <button class="remove-item" onclick="removeItem(this)">✕</button>
+      </div>
+      <div class="cart-item">
+        <span>Regata Boston Celtics</span>
+        <div class="quantity-controls">
+          <button class="quantity-button" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity">1</span>
+          <button class="quantity-button" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+        <span class="price">R$ 249,90</span>
+        <button class="remove-item" onclick="removeItem(this)">✕</button>
+      </div>
+      <div class="total">
+        Total: R$ 499,80
+      </div>
+      <button class="checkout-button">Finalizar Compra</button>
+      <button class="clear-cart-button" onclick="clearCart()">Limpar Carrinho</button>
+      <a href="index.html" class="back-to-shop" onclick="updateCartCount()">Voltar para a Loja</a>
+    </div>
+  </div>
+ 
+  <div class="cart-icon">
+    🛒
+    <div id="cart-count" class="cart-count">2</div>
+  </div>
+ 
+  <div id="cart-tooltip" class="tooltip"></div>
+ 
+  <script>
+    function changeQuantity(button, change) {
+      const quantityElement = button.parentNode.querySelector('.quantity');
+      let quantity = parseInt(quantityElement.textContent);
+      quantity += change;
+      if (quantity < 1) {
+        quantity = 1;
+      }
+      quantityElement.textContent = quantity;
+ 
+      updateTotal();
+      updateCartCount();
+      updateTooltip();
+    }
+ 
+    function updateTotal() {
+      const cartItems = document.querySelectorAll('.cart-item');
+      let total = 0;
+      cartItems.forEach(item => {
+        const quantity = parseInt(item.querySelector('.quantity').textContent);
+        const price = parseFloat(item.querySelector('.price').textContent.replace('R$', '').replace(',', '.'));
+        total += quantity * price;
+      });
+      document.querySelector('.total').textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+    }
+ 
+    function updateCartCount() {
+      const quantities = Array.from(document.querySelectorAll('.quantity')).map(el => parseInt(el.textContent));
+      const totalItems = quantities.reduce((sum, qty) => sum + qty, 0);
+      localStorage.setItem('cartCount', totalItems);
+      document.getElementById('cart-count').textContent = totalItems;
+    }
+ 
+    function updateTooltip() {
+      const tooltip = document.getElementById('cart-tooltip');
+      const cartItems = document.querySelectorAll('.cart-item');
+      let content = '<h3>Itens no Carrinho:</h3>';
+      cartItems.forEach(item => {
+        const name = item.querySelector('span').textContent;
+        const quantity = item.querySelector('.quantity').textContent;
+        const price = item.querySelector('.price').textContent;
+        content += `<div>${name} - ${quantity} x ${price}</div>`;
+      });
+      content += `<div><strong>Total: ${document.querySelector('.total').textContent}</strong></div>`;
+      tooltip.innerHTML = content;
+    }
+ 
+    function removeItem(button) {
+      button.parentNode.remove();
+      updateTotal();
+      updateCartCount();
+      updateTooltip();
+    }
+ 
+    function clearCart() {
+      document.querySelectorAll('.cart-item').forEach(item => item.remove());
+      updateTotal();
+      updateCartCount();
+      updateTooltip();
+    }
+ 
+    function openCart() {
+      window.location.href = 'cart.html';
+    }
+ 
+    window.onload = function() {
+      updateTooltip();
+      const cartCount = localStorage.getItem('cartCount') || 0;
+      document.getElementById('cart-count').textContent = cartCount;
+    }
+  </script>
+</body>
+ 
+</html>
+ 
+ 

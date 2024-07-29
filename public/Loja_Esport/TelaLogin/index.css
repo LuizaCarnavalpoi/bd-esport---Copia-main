@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #030202;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.e-sport {
+  font-family: 'Oswald', sans-serif;
+  font-size: 48px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"] {
+  width: 300px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ccc;
+  text-align: center;
+}
+
+.form-container input[type="email"]::placeholder,
+.form-container input[type="password"]::placeholder {
+  color: #777;
+}
+
+.forgot-password {
+  display: block;
+  margin-bottom: 20px;
+  color: #191919;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.submit-button {
+  width: 198px;
+  height: 44px;
+  cursor: pointer;
+  background: #191919;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.create-account {
+  width: 494px;
+  height: 53px;
+  cursor: pointer;
+  background: #191919;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.create-account a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  line-height: 53px; /* Adjust this to vertically center the text */
+}

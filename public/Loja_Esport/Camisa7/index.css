@@ -1,0 +1,2198 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: #000000;
+  overflow: hidden;
+}
+.flex-row-c {
+  position: relative;
+  width: 1204px;
+  height: 115px;
+  margin: 57px 0 0 118px;
+  z-index: 4;
+}
+.e-sport {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 296px;
+  height: 115px;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  font-family: Oswald, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 71.136px;
+  text-align: left;
+}
+.about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 53px;
+  top: 18px;
+  left: 220px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 275;
+  line-height: 53px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+.shop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 53px;
+  top: 18px;
+  left: 367px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 275;
+  line-height: 53px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+.categoria {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 53px;
+  top: 18px;
+  left: 500px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 275;
+  line-height: 53px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 1;
+}
+.rectangle {
+  position: absolute;
+  width: 460px;
+  height: 41px;
+  top: 24px;
+  left: 744px;
+  background: #000000;
+  z-index: 4;
+  border-radius: 20px;
+}
+/* Define o estilo geral para os botões de tamanho */
+.size-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* ajuste o tamanho conforme necessário */
+  height: 50px; /* ajuste o tamanho conforme necessário */
+  border-radius: 50%; /* faz com que o botão seja redondo */
+  background-color: #000000; /* cor de fundo padrão */
+  color: #000; /* cor do texto padrão */
+  font-size: 16px; /* ajuste o tamanho da fonte conforme necessário */
+  font-family: 'Oswald', sans-serif; /* ajuste a fonte conforme necessário */
+  text-align: center;
+  line-height: 50px; /* alinhamento vertical do texto */
+  margin: 5px; /* espaçamento entre os botões */
+  cursor: pointer;
+  border: 2px solid #000; /* borda opcional */
+}
+
+/* Adiciona uma classe para o botão selecionado */
+.size-button.active {
+  color: #ff5722; /* cor do texto quando selecionado */
+}
+
+/* Se precisar ajustar o estilo para dispositivos móveis, adicione consultas de mídia */
+@media (max-width: 600px) {
+  .size-button {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+
+.buscar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 33px;
+  top: 3px;
+  left: 209px;
+  color: #565656;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 275;
+  line-height: 33px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 6;
+}
+.pesquisa {
+  position: absolute;
+  width: 28px;
+  height: 25px;
+  top: 8px;
+  left: 13px;
+  background: url(./assets/images/edfb72dc-481d-4259-97cb-b839a0ea70b1.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
+  overflow: hidden;
+}
+.camisa-bayer-de-munique {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 634px;
+  height: 36px;
+  margin: 164px 0 0 46px;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 7;
+}
+.flex-row-bf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 345px;
+  height: 70px;
+  margin: 45px 0 0 127px;
+  z-index: 13;
+}
+.number-5 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 70px;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 69.632px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 13;
+}
+.star {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/42a00039-2d23-434e-a6bb-cc2c4ad3f511.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 8;
+}
+.star-1 {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/9b904dde-912c-4ceb-92fc-30bdc386a12e.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 9;
+}
+.star-2 {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/7252cf40-45f0-4276-aa93-0bc9a1ba6bda.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 10;
+}
+.star-3 {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/3ac46d2d-02a7-4504-b797-03ae10471c05.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 11;
+}
+.star-4 {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/8b3f3e44-c391-4c23-ae23-0e59c528bd0f.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 12;
+}
+.avaliacoes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 165px;
+  height: 26px;
+  margin: -2px 0 0 229px;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 14;
+}
+.flex-row-bf-5 {
+  position: relative;
+  width: 1200px;
+  height: 722px;
+  margin: 113px 0 0 118px;
+  z-index: 39;
+}
+.eddeebb {
+  position: absolute;
+  width: 600px;
+  height: 722px;
+  top: 0;
+  left: 163px;
+  background: url(./assets/images/45d697280e70ba814f4b4f17fcc2c1c244e23b39.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 15;
+  border-radius: 20px;
+}
+.fa {
+  position: absolute;
+  width: 145px;
+  height: 121.007px;
+  top: 3px;
+  left: 1px;
+  background: url(./assets/images/9e63728243e086ed15d821d01305a7f1e63caa1f.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 28;
+  border-radius: 12px;
+}
+.line {
+  position: absolute;
+  width: 2px;
+  height: 621.02px;
+  top: 29.99px;
+  left: 785.5px;
+  background: url(./assets/images/864a0754-67e0-4edc-8d00-acb7605b6376.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 17;
+}
+.price-349-90 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 159px;
+  height: 35px;
+  top: 49px;
+  left: 988px;
+  color: rgba(255, 255, 255, 0.69);
+  font-family: Archivo, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 34.816px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 19;
+}
+.price-249-90 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 239px;
+  height: 52px;
+  top: 94px;
+  left: 890px;
+  color: rgba(14, 170, 219, 0.86);
+  font-family: Archivo, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 52px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 32;
+}
+.installment {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 353px;
+  height: 26px;
+  top: 155px;
+  left: 847px;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 20;
+}
+.abbd-cabeac {
+  position: absolute;
+  width: 141px;
+  height: 115px;
+  top: 156px;
+  left: 3px;
+  background: url(./assets/images/865a8528b13cc4dea3e21f786d55656eb5129dce.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 27;
+  border-radius: 12px;
+}
+.stock {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 287px;
+  height: 16px;
+  top: 183px;
+  left: 866px;
+  color: rgba(15, 171, 220, 0.87);
+  font-family: Archivo, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 33;
+}
+.color-black {
+  position: absolute;
+  width: 97px;
+  height: 16px;
+  top: 233px;
+  left: 890px;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 16px;
+  text-align: center;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 34;
+}
+.color {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 16.32px;
+  text-align: center;
+}
+.color-black-6 {
+  position: relative;
+  color: rgba(15, 171, 220, 0.87);
+  font-family: Archivo, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 16.32px;
+  text-align: center;
+}
+.eddeebb-7 {
+  position: absolute;
+  width: 108px;
+  height: 93px;
+  top: 264px;
+  left: 880px;
+  background: url(./assets/images/45d697280e70ba814f4b4f17fcc2c1c244e23b39.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 16;
+  border-radius: 20px;
+}
+.image {
+  position: absolute;
+  width: 142px;
+  height: 112px;
+  top: 305px;
+  left: 3px;
+  background: url(./assets/images/906fdf4d62bf12cc3bcb7a7be4840fc559aa603c.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 30;
+  border-radius: 12px;
+}
+.size {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 75px;
+  height: 16px;
+  top: 380px;
+  left: 901px;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 35;
+}
+.ellipse {
+  position: absolute;
+  width: 52px;
+  height: 54px;
+  top: 409px;
+  left: 891px;
+  background: url(./assets/images/73a9d440-fe84-4184-8c3b-22a5b13e01e6.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 21;
+}
+.ellipse-8 {
+  position: absolute;
+  width: 52px;
+  height: 54px;
+  top: 409px;
+  left: 954px;
+  background: url(./assets/images/30268cb9-c9e0-4d16-b735-9d1196aa5175.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 22;
+}
+.ellipse-9 {
+  position: absolute;
+  width: 52px;
+  height: 54px;
+  top: 409px;
+  left: 1017px;
+  background: url(./assets/images/93c49ee1-2e6c-4c55-a601-d4357917e358.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 23;
+}
+.ellipse-a {
+  position: absolute;
+  width: 52px;
+  height: 54px;
+  top: 409px;
+  left: 1080px;
+  background: url(./assets/images/7c491191-59be-4adf-9288-ed5fb68f34e2.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 24;
+}
+.p {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 14px;
+  height: 22px;
+  top: 424px;
+  left: 908px;
+  color: #0fabdc;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 21.76px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 36;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.33);
+}
+.m {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  top: 424px;
+  left: 971px;
+  color: #0fabdc;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 21.76px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 37;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.33);
+}
+.g {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 17px;
+  height: 22px;
+  top: 424px;
+  left: 1033px;
+  color: #0fabdc;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 21.76px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 38;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.33);
+}
+.gg {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 33px;
+  height: 22px;
+  top: 424px;
+  left: 1089px;
+  color: #0fabdc;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 21.76px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 39;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.33);
+}
+.image-b {
+  position: absolute;
+  width: 144px;
+  height: 120px;
+  top: 448px;
+  left: 0;
+  background: url(./assets/images/e5e6b387e8d3d70ab119b8ec196cdaa453d23ac4.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 31;
+  border-radius: 12px;
+}
+.rectangle-c {
+  position: absolute;
+  width: 301px;
+  height: 73px;
+  top: 510px;
+  left: 873px;
+  background: #0fabdc;
+  z-index: 25;
+  border-radius: 15px;
+}
+.comprar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 131px;
+  height: 26px;
+  top: 25px;
+  left: 88px;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 26;
+}
+.image-d {
+  position: absolute;
+  width: 142px;
+  height: 112px;
+  top: 604px;
+  left: 3px;
+  background: url(./assets/images/8379e95a16e7db499f6c784d7abc3267638e14db.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 29;
+  border-radius: 12px;
+}
+.line-e {
+  position: relative;
+  width: 786.01px;
+  height: 2px;
+  margin: 23px 0 0 118.995px;
+  background: url(./assets/images/dc7a9e69-bb6b-4825-85b9-6608bc2ec2da.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 18;
+}
+.indicado-para-dia-a-dia {
+  position: relative;
+  width: 481px;
+  height: 247px;
+  margin: 44px 0 0 127px;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34.816px;
+  text-align: left;
+  z-index: 40;
+}
+.indicado-para {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34.816px;
+  text-align: left;
+}
+.dia-a-dia {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 34.816px;
+  text-align: left;
+}
+.indicado-para-f {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34.816px;
+  text-align: left;
+}
+.dia-a-dia-10 {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 34.816px;
+  text-align: left;
+}
+.material-composicao {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34.816px;
+  text-align: left;
+}
+.line-11 {
+  position: relative;
+  width: 1368.568px;
+  height: 0.5px;
+  margin: 86.75px 0 0 35.75px;
+  background: url(./assets/images/1816d79a-5374-46d7-ae5a-c743a0b7ca82.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 41;
+}
+.descricao {
+  display: block;
+  position: relative;
+  height: 60px;
+  margin: 41.687px 0 0 54.019px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 59.832px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 43;
+}
+.descricao-12 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 1350px;
+  height: 132px;
+  margin: 0 0 0 54.019px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 33.24px;
+  text-align: left;
+  z-index: 50;
+}
+.flex-row-cbf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 1060px;
+  height: 26px;
+  margin: 28px 0 0 54.019px;
+  z-index: 49;
+}
+.nome-camisa-bayern-de-munique-masculina {
+  flex-shrink: 0;
+  position: relative;
+  width: 483px;
+  height: 26px;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 49;
+}
+.nome {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: left;
+}
+.camisa-bayern-de-munique-masculina {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
+.genero-masculino {
+  flex-shrink: 0;
+  position: relative;
+  width: 206px;
+  height: 26px;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 48;
+}
+.genero {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: left;
+}
+.masculino {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+  text-align: left;
+}
+.masculino-13 {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
+.flex-row-fd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 1203px;
+  height: 26px;
+  margin: 40px 0 0 54.019px;
+  z-index: 51;
+}
+.indicado-para-dia-a-dia-14 {
+  flex-shrink: 0;
+  position: relative;
+  width: 264px;
+  height: 26px;
+  font-family: Architects Daughter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 47;
+}
+.indicado-para-15 {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.352px;
+  text-align: left;
+}
+.dia-a-dia-16 {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 33.352px;
+  text-align: left;
+}
+.time-atleta-bayern-de-munique {
+  flex-shrink: 0;
+  position: relative;
+  width: 349px;
+  height: 26px;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 51;
+}
+.time-atleta {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: left;
+}
+.time-atleta-17 {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.8px;
+  text-align: left;
+}
+.bayern-de-munique {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
+.flex-row-d {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 1171px;
+  height: 26px;
+  margin: 40px 0 0 54.019px;
+  z-index: 46;
+}
+.material-poliester {
+  flex-shrink: 0;
+  position: relative;
+  width: 198px;
+  height: 26px;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 46;
+}
+.material {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: left;
+}
+.empty {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.8px;
+  text-align: left;
+}
+.poliester {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
+.composicao-poliester {
+  flex-shrink: 0;
+  position: relative;
+  width: 317px;
+  height: 26px;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 45;
+}
+.composicao {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: left;
+}
+.empty-18 {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.8px;
+  text-align: left;
+}
+.percent-poliester {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
+.flex-row-e {
+  position: relative;
+  width: 1334.001px;
+  height: 104px;
+  margin: 40px 0 0 54.019px;
+  z-index: 52;
+}
+.dimensoes-aproximadas {
+  position: absolute;
+  width: 522px;
+  height: 104px;
+  top: 0;
+  left: 0;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26.112px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 52;
+}
+.dimensoes-aproximadas-19 {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: left;
+}
+.empty-1a {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
+.medidas-da-peca {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26.112px;
+  text-align: left;
+}
+.garantia-do-fabricante {
+  position: absolute;
+  width: 480px;
+  height: 52px;
+  top: 0.06px;
+  left: 854.001px;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26.112px;
+  text-align: left;
+  z-index: 44;
+}
+.garantia-do-fabricante-1b {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: left;
+}
+.contra-defeito-de-fabricacao {
+  position: relative;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  text-align: left;
+}
+.line-1c {
+  position: relative;
+  width: 1368.568px;
+  height: 0.5px;
+  margin: 125.75px 0 0 35.769px;
+  background: url(./assets/images/fb7dfa67-b431-4b29-8250-ec309ae151d1.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 42;
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 1065px;
+  height: 60px;
+  margin: 125.813px 0 0 187px;
+  z-index: 54;
+}
+.avaliacao-do-produto {
+  flex-shrink: 0;
+  position: relative;
+  height: 60px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 59.832px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 53;
+}
+.avaliacoes-dos-clientes {
+  flex-shrink: 0;
+  position: relative;
+  height: 60px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 59.832px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 54;
+}
+.flex-row-c-1d {
+  position: relative;
+  width: 824px;
+  height: 70px;
+  margin: -4px 0 0 321px;
+  z-index: 61;
+}
+.regroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 321px;
+  height: 70px;
+  top: 0;
+  left: 503px;
+  z-index: 61;
+}
+.star-1e {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 70px;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 69.632px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 61;
+}
+.star-1f {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/ab6f63c8-1a9f-4f77-ba2f-8927d20bc47a.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 56;
+}
+.star-20 {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/ae47eab3-4f3b-4846-9848-26e305bc6402.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 57;
+}
+.star-21 {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/d66d67eb-b092-47b4-a0e7-b06e2ef4c5f7.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 58;
+}
+.star-22 {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/0d6da119-fad9-42d7-ba87-9b9e2d5ffa00.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 59;
+}
+.percent {
+  flex-shrink: 0;
+  position: relative;
+  width: 46px;
+  height: 41px;
+  background: url(./assets/images/2544d964-e0f0-4532-af30-5c6eb590e679.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 60;
+}
+.flex-row-fc {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 52px;
+  top: 7px;
+  left: 0;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 52px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 55;
+}
+.recomendam-esse-produto {
+  position: relative;
+  width: 908px;
+  height: 66px;
+  margin: 1px 0 0 208px;
+  z-index: 63;
+}
+.media-entre-opinioes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 351px;
+  height: 66px;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 21.76px;
+  text-align: center;
+  z-index: 63;
+}
+.produtos-mais-vendidos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 218px;
+  height: 22px;
+  top: 0;
+  left: 690px;
+  color: #ffffff;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 21.76px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 62;
+}
+.text-37 {
+  display: block;
+  position: relative;
+  height: 44px;
+  margin: 145px 0 0 80px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 44px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 64;
+}
+.flex-row-23 {
+  position: relative;
+  width: 1392px;
+  height: 576px;
+  margin: 69px 0 0 24px;
+  z-index: 81;
+}
+.rectangle-24 {
+  position: absolute;
+  width: 436px;
+  height: 571px;
+  top: 0;
+  left: 11px;
+  background: #ffffff;
+  z-index: 65;
+  border-radius: 35px;
+}
+.camisa-barcelona-treino {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  margin: 69px 0 0 53px;
+  background: url(./assets/images/fcb6ebc1-eb5b-4450-b803-9f57546934c6.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 69;
+  border-radius: 35px;
+}
+.camisa-barcelona {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 343px;
+  height: 16px;
+  margin: 14px 0 0 47px;
+  color: #041632;
+  font-family: Anek Gujarati, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 68;
+}
+.camisa-barcelona-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 282px;
+  height: 57px;
+  margin: 5px 0 0 79px;
+  color: #041632;
+  font-family: Andika New Basic, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 66;
+}
+.rectangle-25 {
+  position: absolute;
+  width: 436px;
+  height: 571px;
+  top: 0;
+  left: 469px;
+  background: #ffffff;
+  z-index: 70;
+  border-radius: 35px;
+}
+.photoroom {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  margin: 67px 0 0 50px;
+  background: url(./assets/images/a53f6c707b0917fbef84d791eb83a93683e3c2de.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 75;
+  border-radius: 35px;
+}
+.camisa-real-madrid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 343px;
+  height: 16px;
+  margin: 16px 0 0 47px;
+  color: #041632;
+  font-family: Anek Gujarati, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 74;
+}
+.camisa-real-madrid-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 282px;
+  height: 57px;
+  margin: 5px 0 0 79px;
+  color: #041632;
+  font-family: Andika New Basic, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 72;
+}
+.rectangle-26 {
+  position: absolute;
+  width: 436px;
+  height: 571px;
+  top: 0;
+  left: 935px;
+  background: #ffffff;
+  z-index: 76;
+  border-radius: 35px;
+}
+.camisa-arsenal-away {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  margin: 69px 0 0 55px;
+  background: url(./assets/images/f189636cc6e6812f0c65f5c1b2fa340b92e59a32.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 80;
+  border-radius: 35px;
+}
+.camisa-arsenal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 343px;
+  height: 16px;
+  margin: 14px 0 0 51px;
+  color: #041632;
+  font-family: Anek Gujarati, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 79;
+}
+.camisa-arsenal-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 282px;
+  height: 57px;
+  margin: 5px 0 0 79px;
+  color: #041632;
+  font-family: Andika New Basic, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 77;
+}
+.sold-out {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 256px;
+  height: 32px;
+  margin: 38px 0 0 90px;
+  color: #ff0000;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 82;
+}
+.discount-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 468px;
+  height: 32px;
+  top: 512px;
+  left: 0;
+  color: #041632;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 67;
+}
+.discount-price-27 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 468px;
+  height: 32px;
+  top: 512px;
+  left: 458px;
+  color: #041632;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 73;
+}
+.discount-price-28 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 468px;
+  height: 32px;
+  top: 512px;
+  left: 924px;
+  color: #041632;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 78;
+}
+.sold-out-29 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 256px;
+  height: 32px;
+  top: 542px;
+  left: 560px;
+  color: #ff0000;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 71;
+}
+.sold-out-2a {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 256px;
+  height: 32px;
+  top: 544px;
+  left: 1027px;
+  color: #ff0000;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 81;
+}
+.customer-purchases {
+  display: block;
+  position: relative;
+  height: 60px;
+  margin: 160px 0 0 80px;
+  color: #ffffff;
+  font-family: Mukta, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 59.832px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 83;
+}
+.flex-row-2b {
+  position: relative;
+  width: 1392px;
+  height: 574px;
+  margin: 85px 0 0 24px;
+  z-index: 96;
+}
+.rectangle-2c {
+  position: absolute;
+  width: 436px;
+  height: 571px;
+  top: 0;
+  left: 11px;
+  background: #ffffff;
+  z-index: 85;
+  border-radius: 35px;
+}
+.image-2d {
+  position: relative;
+  width: 340px;
+  height: 345.556px;
+  margin: 66px 0 0 47px;
+  background: url(./assets/images/5022664ba4556dc5f4cbfd6365cbb5ab3728fde8.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 99;
+  border-radius: 35px;
+}
+.camisa-bayern-munique {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 343px;
+  height: 36px;
+  top: 421px;
+  left: 47px;
+  color: #041632;
+  font-family: Anek Gujarati, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 88;
+}
+.camisa-bayern-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 282px;
+  height: 57px;
+  top: 444px;
+  left: 79px;
+  color: #041632;
+  font-family: Andika New Basic, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 86;
+}
+.rectangle-2e {
+  position: absolute;
+  width: 436px;
+  height: 571px;
+  top: 0;
+  left: 469px;
+  background: #ffffff;
+  z-index: 89;
+  border-radius: 35px;
+}
+.image-2f {
+  position: relative;
+  width: 361.116px;
+  height: 345.56px;
+  margin: 66px 0 0 38px;
+  background: url(./assets/images/562f021a476cddf7ad5ffb222ba93a0995f5461d.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 98;
+  border-radius: 35px;
+}
+.camisa-manchester-city {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 343px;
+  height: 16px;
+  margin: 9.44px 0 0 47px;
+  color: #041632;
+  font-family: Anek Gujarati, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 92;
+}
+.camisa-manchester-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 282px;
+  height: 57px;
+  margin: 7px 0 0 79px;
+  color: #041632;
+  font-family: Andika New Basic, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 90;
+}
+.rectangle-30 {
+  position: absolute;
+  width: 436px;
+  height: 571px;
+  top: 0;
+  left: 935px;
+  background: #ffffff;
+  z-index: 93;
+  border-radius: 35px;
+}
+.image-31 {
+  position: relative;
+  width: 374.746px;
+  height: 345.56px;
+  margin: 66px 0 0 33px;
+  background: url(./assets/images/bd3fa1b8c1645c864a536f7457d7e2cdb5a2051d.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 100;
+  border-radius: 35px;
+}
+.camisa-borussia-dortmund {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 343px;
+  height: 28px;
+  margin: 9.44px 0 0 47px;
+  color: #041632;
+  font-family: Anek Gujarati, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 97;
+}
+.camisa-dortmund-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 282px;
+  height: 57px;
+  margin: -5px 0 0 79px;
+  color: #041632;
+  font-family: Andika New Basic, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 95;
+}
+.discount-price-32 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 468px;
+  height: 32px;
+  top: 512px;
+  left: 0;
+  color: #041632;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 87;
+}
+.discount-price-33 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 468px;
+  height: 32px;
+  top: 512px;
+  left: 458px;
+  color: #041632;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 91;
+}
+.r-vista-com-desconto {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 468px;
+  height: 32px;
+  top: 512px;
+  left: 924px;
+  color: #041632;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 96;
+}
+.esgotado {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 256px;
+  height: 32px;
+  top: 542px;
+  left: 1024px;
+  color: #ff0000;
+  font-family: Andika, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.17px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 94;
+}
+.line-34 {
+  position: relative;
+  width: 1368.568px;
+  height: 0.5px;
+  margin: 185.75px 0 0 23.75px;
+  background: url(./assets/images/ba941493-03b6-4ece-af2c-8f06679d715d.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 84;
+}
+.logo-e-sport {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 554px;
+  height: 271px;
+  margin: 227.75px 0 0 458px;
+  font-family: Oswald, var(--default-font-family);
+  font-size: 200px;
+  font-weight: 400;
+  line-height: 271px;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(143.76deg, #ffffff, #343434);
+  opacity: 0.4;
+  z-index: 127;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.flex-row-35 {
+  position: relative;
+  width: 940px;
+  height: 89px;
+  margin: 470px 0 0 249px;
+  z-index: 126;
+}
+.c-bank-logo {
+  position: absolute;
+  width: 101px;
+  height: 89px;
+  top: 0;
+  left: 517px;
+  background: url(./assets/images/295e0864473ec319481dcb8b548de4506ccb1414.png)
+    no-repeat center;
+  background-size: contain;
+  z-index: 126;
+}
+.frame {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  top: 3px;
+  left: 0;
+  z-index: 115;
+  overflow: hidden;
+}
+.vector {
+  position: relative;
+  width: 100px;
+  height: 25.837px;
+  margin: 27.08px 0 0 0;
+  background: url(./assets/images/18daffea-5d2c-44ed-a264-c7b6937a76e0.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 116;
+}
+.paypal-logo {
+  position: absolute;
+  width: 151px;
+  height: 32px;
+  top: 28px;
+  left: 325px;
+  background: url(./assets/images/b7dafc0a-28af-4eea-911f-e896ba8b049f.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 114;
+  overflow: hidden;
+}
+.vector-36 {
+  position: absolute;
+  width: 2.89%;
+  height: 14.23%;
+  top: 32.35%;
+  left: 18.51%;
+  background: url(./assets/images/df6577f9-f5a1-49ff-8d96-fca92beaa561.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 109;
+}
+.vector-37 {
+  position: absolute;
+  width: 3.72%;
+  height: 31.46%;
+  top: 32.58%;
+  left: 70.96%;
+  background: url(./assets/images/b107b39f-74cf-4dec-8946-32a76d419c2f.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 107;
+}
+.vector-38 {
+  position: absolute;
+  width: 1.38%;
+  height: 24.4%;
+  top: 36.42%;
+  left: 17%;
+  background: url(./assets/images/d3a4a5a1-d6de-4112-93df-e59653d6f9ed.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 110;
+}
+.vector-39 {
+  position: absolute;
+  width: 6.61%;
+  height: 24.4%;
+  top: 36.42%;
+  left: 21.96%;
+  background: url(./assets/images/b6cf4e0c-f5fe-44f5-9740-561ff8eb842f.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 112;
+}
+.pix {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 38px;
+  height: 24px;
+  top: 33px;
+  left: 718px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 106;
+}
+.mastercard-logo {
+  position: absolute;
+  width: 151px;
+  height: 15px;
+  top: 39px;
+  left: 789px;
+  z-index: 121;
+  overflow: hidden;
+}
+.group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 122;
+}
+.xmlid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(./assets/images/c63d2924-d2d5-432e-b761-8a4c7a287a5a.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 123;
+}
+.vector-3a {
+  position: absolute;
+  width: 2.89%;
+  height: 14.23%;
+  top: 50.65%;
+  left: 18.51%;
+  background: url(./assets/images/b1231f75-1f98-4398-99ec-1aa145bc2d57.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 111;
+}
+.flex-row-aa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 1018px;
+  height: 31px;
+  margin: 178px 0 0 142px;
+  z-index: 120;
+}
+.fique-conectado {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 307px;
+  height: 31px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 120;
+}
+.certificado {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 213px;
+  height: 31px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 113;
+}
+.flex-row-db {
+  position: relative;
+  width: 1044px;
+  height: 77px;
+  margin: 26px 0 0 195px;
+  z-index: 119;
+}
+.img {
+  position: absolute;
+  width: 71px;
+  height: 76px;
+  top: 0;
+  left: 677px;
+  background: url(./assets/images/09e1b78c5b799d6ee849abf5da2ed5b720901641.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 119;
+}
+.regroup-3b {
+  position: absolute;
+  width: 19.73%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 104;
+}
+.path {
+  position: absolute;
+  width: 26.44%;
+  height: 51.56%;
+  top: 2.89%;
+  left: 36.01%;
+  background: url(./assets/images/d3463e15-ebaa-4288-b98f-645d2c792e87.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 103;
+}
+.logos {
+  position: absolute;
+  width: 29.31%;
+  height: 50.13%;
+  top: 3.94%;
+  left: 70.69%;
+  background: url(./assets/images/4a73be4c-4365-4eb6-b689-c0911ba72b61.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 101;
+}
+.vector-3c {
+  position: absolute;
+  width: 26.22%;
+  height: 51.95%;
+  top: 5.19%;
+  left: 0;
+  background: url(./assets/images/7e688cfc-e200-4183-a0e7-628272d98d5b.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 104;
+}
+.footer {
+  position: absolute;
+  width: 88px;
+  height: 73px;
+  top: 4px;
+  left: 786px;
+  background: url(./assets/images/bb79621c5dd1bf1447cf666d66003281700ccf89.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 118;
+}
+.selo-lojaprotegida {
+  position: absolute;
+  width: 131px;
+  height: 31px;
+  top: 23px;
+  left: 913px;
+  background: url(./assets/images/eea45ca7e3e45c9396f318526c4b501d080e19a1.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 117;
+}
+.copyright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 188px;
+  height: 31px;
+  margin: 288px 0 0 569px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 105;
+}
+.line-3d {
+  position: absolute;
+  width: 1440px;
+  height: 1px;
+  top: 5612px;
+  left: 0;
+  background: url(./assets/images/7673cced-fc68-49a9-8285-aff81ad39a94.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 125;
+}
+.line-3e {
+  position: absolute;
+  width: 1440px;
+  height: 1px;
+  top: 5732px;
+  left: 0;
+  background: url(./assets/images/42b369cf-6535-49b0-b128-52596d0d322b.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 124;
+}

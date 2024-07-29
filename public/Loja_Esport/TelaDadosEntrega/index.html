@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrega</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #030202;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 90%;
+      margin: 20px;
+    }
+
+    .e-sport {
+      font-family: 'Oswald', sans-serif;
+      font-size: 48px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .form-container label {
+      display: block;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #000;
+    }
+
+    .form-container input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ccc;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .form-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .submit-button,
+    .reset-button,
+    .calculate-freight {
+      width: 100%;
+      height: 44px;
+      cursor: pointer;
+      background: #191919;
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .calculate-freight {
+      margin-bottom: 20px;
+    }
+
+    .back-to-shop {
+      display: block;
+      margin-top: 20px;
+      color: #191919;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .freight-value {
+      font-size: 24px;
+      color: #000;
+      margin-top: 10px;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      .form-container h1 {
+        font-size: 28px;
+      }
+
+      .form-container label {
+        font-size: 16px;
+      }
+
+      .form-container input[type="text"] {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .submit-button,
+      .reset-button,
+      .calculate-freight {
+        font-size: 14px;
+      }
+
+      .freight-value {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <span class="e-sport">E-Sport</span>
+    <div class="form-container">
+      <h1>Entrega</h1>
+      <form id="delivery-form">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" readonly>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" readonly>
+
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" name="rua" readonly>
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero" placeholder="Número da Casa" required>
+
+        <label for="complemento">Complemento:</label>
+        <input type="text" id="complemento" name="complemento" placeholder="Complemento" required>
+
+        <button type="button" class="calculate-freight" onclick="calculateFreight()">Calcular Frete</button>
+
+        <div id="freight-value" class="freight-value"></div>
+
+        <div class="form-buttons">
+          <button type="submit" class="submit-button">Finalizar Compra</button>
+          <button type="reset" class="reset-button">Limpar</button>
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+      </form>
+      <a href="index.html" class="back-to-shop">Voltar para a Loja</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('cep').addEventListener('blur', function () {
+      const cep = this.value.replace(/\D/g, '');
+      if (cep.length === 8) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(response => response.json())
+          .then(data => {
+            if (!('erro' in data)) {
+              document.getElementById('estado').value = data.uf;
+              document.getElementById('cidade').value = data.localidade;
+              document.getElementById('rua').value = data.logradouro;
+            } else {
+              alert('CEP não encontrado.');
+            }
+          })
+          .catch(error => {
+            console.error('Erro ao buscar CEP:', error);
+            alert('Erro ao buscar CEP. Tente novamente.');
+          });
+      } else {
+        alert('CEP inválido.');
+      }
+    });
+
+    function calculateFreight() {
+      const estado = document.getElementById('estado').value.toUpperCase();
+      let freight = 0;
+
+      switch (estado) {
+        case 'SP':
+        case 'RJ':
+        case 'ES':
+        case 'MG':
+          freight = 40; // Sudeste
+          break;
+        case 'AM':
+        case 'PA':
+        case 'MA':
+        case 'MT':
+        case 'RO':
+        case 'RR':
+        case 'AP':
+          freight = 70; // Norte
+          break;
+        case 'BA':
+        case 'SE':
+        case 'AL':
+        case 'PB':
+        case 'PE':
+        case 'RN':
+          freight = 50; // Nordeste
+          break;
+        case 'GO':
+        case 'MS':
+        case 'DF':
+        case 'MT':
+          freight = 60; // Centro-Oeste
+          break;
+        case 'PR':
+        case 'SC':
+        case 'RS':
+          freight = 50; // Sul
+          break;
+        default:
+          freight = 0;
+          break;
+      }
+
+      document.getElementById('freight-value').innerText = `Valor do Frete: R$ ${freight.toFixed(2)}`;
+    }
+
+    document.getElementById('delivery-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const cep = document.getElementById('cep').value.trim();
+      const estado = document.getElementById('estado').value.trim();
+      const cidade = document.getElementById('cidade').value.trim();
+      const rua = document.getElementById('rua').value.trim();
+      const numero = document.getElementById('numero').value.trim();
+      const complemento = document.getElementById('complemento').value.trim();
+
+      if (!cep || !estado || !cidade || !rua || !numero || !complemento) {
+        document.getElementById('error-message').innerText = 'Todos os campos obrigatórios devem ser preenchidos.';
+        return;
+      }
+
+      document.getElementById('error-message').innerText = '';
+      // Aqui você pode adicionar a lógica para finalizar a compra
+      alert('Compra finalizada com sucesso!');
+    });
+  </script>
+</body>
+</html>

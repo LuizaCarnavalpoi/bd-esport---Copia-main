@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="PT">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tela de Criar Conta</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@275&display=swap" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap" />
+
+  <link rel="stylesheet" href="index.css" />
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a href="../TelaOFC/index.html">
+
+      <span class="e-sport">E-Sport</span>
+
+    </a>
+
+    <div class="form-container">
+
+      <h1>Criar Conta</h1>
+
+      <label for="fullname">Nome completo</label>
+
+      <input type="text" id="fullname" name="fullname" placeholder="Informe seu Nome Completo" />
+
+      <label for="email">E-mail</label>
+
+      <input type="email" id="email" name="email" placeholder="Informe seu e-mail" />
+
+      <label for="password">Senha</label>
+
+      <input type="password" id="password" name="password" placeholder="Deve conter pelo menos 6 caracteres" />
+
+      <label for="confirm-password">Confirmar Senha</label>
+
+      <input type="password" id="confirm-password" name="confirm-password"
+        placeholder="Insira a senha nova mais uma vez" />
+
+      <br>
+      <a href="../TelaLogin/index.html"> 
+      <button class="submit-button" onclick="register()">Criar Conta</button>
+    </a>
+    </div>
+
+  </div>
+
+  <script>
+
+    function register() {
+
+      const fullname = document.getElementById('fullname').value;
+
+      const email = document.getElementById('email').value;
+
+      const password = document.getElementById('password').value;
+
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      if (password !== confirmPassword) {
+
+        alert('As senhas não coincidem!');
+
+        return;
+
+      }
+
+      fetch('/register', {
+
+        method: 'POST',
+
+        headers: {
+
+          'Content-Type': 'application/json',
+
+        },
+
+        body: JSON.stringify({ name: fullname, email, passwordHash: password, token: '' }),
+
+      })
+
+        .then(response => response.json())
+
+        .then(data => {
+
+          if (data.message === 'Usuário registrado com sucesso') {
+
+            alert('Usuário registrado com sucesso');
+
+            // Redirecionar para a página de login ou outra página
+
+          } else {
+
+            alert(data.message || 'Erro ao registrar');
+
+          }
+
+        })
+
+        .catch((error) => {
+
+          console.error('Erro:', error);
+
+        });
+
+    }
+
+  </script>
+
+</body>
+
+</html>

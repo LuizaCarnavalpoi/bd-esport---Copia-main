@@ -1,0 +1,86 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+  "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+  "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: #030202;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #0e0d0d;
+  font-family: var(--default-font-family);
+}
+
+.e-sport {
+  font-size: 48px;
+  font-family: Oswald, var(--default-font-family);
+  margin-bottom: 20px;
+}
+
+.flex-row-ccc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rectangle {
+  background: url(./assets/images/e03cc7cb-2427-4f6d-ac84-6fa0a9936ef5.png) no-repeat center;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pagamento {
+  font-size: 48px;
+  font-family: Oswald, var(--default-font-family);
+}
+
+.pagamento-cartao-credito {
+  font-size: 32px;
+  font-family: Mukta, var(--default-font-family);
+}
+
+.finalizar-pedido {
+  font-size: 24px;
+  font-family: Archivo, var(--default-font-family);
+}
+
+.input-cartao, .input-mes, .input-ano, .input-cvv, .input-cpf, .input-nome-cartao {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.input-cartao, .input-nome-cartao {
+  width: calc(100% - 20px);
+}
+
+.input-mes, .input-ano, .input-cvv {
+  width: calc(33% - 20px);
+}
+
+.input-cpf {
+  width: calc(50% - 20px);
+}
+
+.rectangle-d {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.opcoes-parcelamento {
+  font-size: 16px;
+  font-family: Mukta, var(--default-font-family);
+}

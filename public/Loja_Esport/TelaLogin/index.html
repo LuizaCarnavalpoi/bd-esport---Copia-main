@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tela de Login</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@275&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap" />
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="container">
+<a href="../TelaOFC/index.html">
+<span class="e-sport">E-Sport</span>
+</a>
+<div class="form-container">
+<h1>Fazer Login</h1>
+<label for="email">E-mail</label>
+<input type="email" id="email" name="email" placeholder="Informe seu e-mail" />
+ 
+        <label for="password">Senha</label>
+<input type="password" id="password" name="password" placeholder="Digite sua senha" />
+ 
+        <a href="../TelaRecupSenha/index.html" class="forgot-password">Esqueceu a senha?</a>
+<br>
+<a href="../TelaOFC/index.html">
+<button class="submit-button" onclick="login()">Acessar conta</button> <br>
+</a>
+<button class="create-account">
+<a href="../TelaCriarConta/index.html">Crie sua conta na E-Sport</a>
+</button>
+</div>
+</div>
+ 
+    <script>
+      function login() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+ 
+        fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.message === 'Login bem-sucedido') {
+              alert('Login bem-sucedido');
+              // Redirecionar para a página de usuário ou dashboard
+            } else {
+              alert('Credenciais inválidas');
+            }
+          })
+          .catch((error) => {
+            console.error('Erro:', error);
+          });
+      }
+</script>
+</body>
+</html>

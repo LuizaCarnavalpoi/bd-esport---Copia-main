@@ -1,0 +1,170 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0px;
+  background: #030202;
+  overflow: hidden;
+}
+.e-sport {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 264px;
+  height: 71px;
+  margin: 30px 0 0 588px;
+  color: #ffffff;
+  font-family: Oswald, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 71px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 3;
+}
+.flex-row-b {
+  position: relative;
+  width: 3423px;
+  height: 816px;
+  margin: 0 0 0 406px;
+  z-index: 4;
+}
+.nba-logo {
+  position: absolute;
+  width: 141px;
+  height: 94px;
+  top: 0;
+  left: 3189px;
+  z-index: 1;
+  overflow: hidden;
+}
+.vector {
+  position: relative;
+  width: 62.216px;
+  height: 94px;
+  margin: 0 0 0 39.392px;
+  background: url(./assets/images/8da2680c-f9d3-4b4c-875b-8df6c5eff222.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.nba {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 39px;
+  top: 19px;
+  left: 3302px;
+  color: #ffffff;
+  font-family: Oxygen, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: left;
+  white-space: nowrap;
+}
+.rectangle {
+  position: absolute;
+  width: 628px;
+  height: 743px;
+  top: 73px;
+  left: 0;
+  font-size: 0px;
+  background: url(./assets/images/a2cf7070-5da6-44ac-b8ab-a450ced3c1c1.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 4;
+}
+.success-message {
+  display: block;
+  position: relative;
+  height: 57px;
+  margin: 70px 0 0 35px;
+  color: #000000;
+  font-family: Oswald, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 57px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 6;
+}
+.red-purse {
+  position: relative;
+  width: 159px;
+  height: 188px;
+  margin: 70px 0 0 225px;
+  background: url(./assets/images/205529c2f99c637c4c0df08271faddb24477a256.png)
+    no-repeat center;
+  background-size: contain;
+  z-index: 7;
+}
+.thank-you {
+  display: block;
+  position: relative;
+  height: 57px;
+  margin: 37px 0 0 69px;
+  color: #000000;
+  font-family: Oswald, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 57px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 5;
+}
+.rectangle-button {
+  position: relative;
+  width: 221px;
+  height: 85px;
+  margin: 125px 0 0 194px;
+  cursor: pointer;
+  background: #191919;
+  border: none;
+  z-index: 8;
+  border-radius: 25px;
+}
+.ok-span {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 214px;
+  height: 32px;
+  top: 27px;
+  left: 3px;
+  color: #c3c3c3;
+  font-family: Archivo, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 32px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 9;
+}
